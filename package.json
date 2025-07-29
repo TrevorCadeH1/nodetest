@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "node api-example.js",
-    "lint": "next lint",
-    "postinstall": "pnpm install"
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "19.1.0",
