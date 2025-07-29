@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "node api-example.js",
+    "start": "node searchapi.js",
     "lint": "next lint"
   },
   "dependencies": {
