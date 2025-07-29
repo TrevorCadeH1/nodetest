@@ -4,7 +4,6 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3004;
 
-// Middleware to enable CORS for your website
 app.use(cors({
   origin: [
     'http://localhost:3001',
@@ -12,15 +11,13 @@ app.use(cors({
   ]
 }));
 
-// Middleware to parse JSON bodies
 app.use(express.json());
 
-// Sample product data (you can replace this with a database later)
 const products = [
   {
     id: 1,
     name: "Hinge Accessories Deep Thread System Screws POZI Drive #7 Gauge 1/2\" Length - 1,000 Box Qty",
-    category: "Hardware",
+    category: "Screws",
     sku: "BP6611300HG",
     price: 100.00,
     priceUnit: "1000 Each",
@@ -109,41 +106,26 @@ const products = [
   }
 ];
 
-// Example GET endpoint
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello, world!' });
-});
-
-// Example POST endpoint
-app.post('/api/data', (req, res) => {
-  const data = req.body;
-  res.json({ received: data });
-});
-
-// Search products API
 app.get('/api/products/search', (req, res) => {
   const { q, category, minPrice, maxPrice, limit = 50 } = req.query;
   
   let filteredProducts = [...products];
   
-  // Filter by search query (name, SKU, or description)
   if (q) {
     const searchTerm = q.toLowerCase();
-    filteredProducts = filteredProducts.filter(product => 
+    filteredProducts = filteredProducts.filter(product =>
       product.name.toLowerCase().includes(searchTerm) ||
       product.sku.toLowerCase().includes(searchTerm) ||
       product.description.toLowerCase().includes(searchTerm)
     );
   }
   
-  // Filter by category
   if (category) {
     filteredProducts = filteredProducts.filter(product => 
       product.category.toLowerCase() === category.toLowerCase()
     );
   }
   
-  // Filter by price range
   if (minPrice) {
     filteredProducts = filteredProducts.filter(product => 
       product.unitPrice >= parseFloat(minPrice)
@@ -156,7 +138,6 @@ app.get('/api/products/search', (req, res) => {
     );
   }
   
-  // Limit results
   filteredProducts = filteredProducts.slice(0, parseInt(limit));
   
   res.json({
@@ -166,7 +147,6 @@ app.get('/api/products/search', (req, res) => {
   });
 });
 
-// Get product by exact name
 app.get('/api/products/name/:name', (req, res) => {
   const productName = req.params.name;
   const product = products.find(p => 
@@ -180,7 +160,6 @@ app.get('/api/products/name/:name', (req, res) => {
   }
 });
 
-// Get product by SKU
 app.get('/api/products/sku/:sku', (req, res) => {
   const sku = req.params.sku;
   const product = products.find(p => 
@@ -194,13 +173,11 @@ app.get('/api/products/sku/:sku', (req, res) => {
   }
 });
 
-// Get all categories
 app.get('/api/products/categories', (req, res) => {
   const categories = [...new Set(products.map(p => p.category))];
   res.json({ categories });
 });
 
-// Get all products (with pagination)
 app.get('/api/products', (req, res) => {
   const { page = 1, limit = 20 } = req.query;
   const startIndex = (parseInt(page) - 1) * parseInt(limit);
