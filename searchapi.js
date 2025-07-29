@@ -22,7 +22,8 @@ const products = [
     price: 100.00,
     priceUnit: "1000 Each",
     unitPrice: 0.100,
-    description: "Deep thread system screws with POZI drive, #7 gauge, 1/2\" length."
+    description: "Deep thread system screws with POZI drive, #7 gauge, 1/2\" length.",
+    image: "Screw1.png"
   },
   {
     id: 2,
@@ -32,7 +33,8 @@ const products = [
     price: 5.140,
     priceUnit: "Each",
     unitPrice: 5.140,
-    description: "110 degree soft-close hinges for door overlays up to 22mm, dowel."
+    description: "110 degree soft-close hinges for door overlays up to 22mm, dowel.",
+    image: "Hinge.png"
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ const products = [
     price: 11.850,
     priceUnit: "Each",
     unitPrice: 11.850,
-    description: "Angled hinges with BLUMOTION, 45mm boring pattern, full overlay, nickel-plated, Inserta."
+    description: "Angled hinges with BLUMOTION, 45mm boring pattern, full overlay, nickel-plated, Inserta.",
+    image: "Hinge2.png"
   },
   {
     id: 4,
@@ -52,7 +55,8 @@ const products = [
     price: 50.00,
     priceUnit: "1000 Each",
     unitPrice: 0.050,
-    description: "No. 8 deep thread wood screw, 2\" length, 1,000 per box."
+    description: "No. 8 deep thread wood screw, 2\" length, 1,000 per box.",
+    image: "Screw2.png"
   },
   {
     id: 5,
@@ -62,7 +66,8 @@ const products = [
     price: 36.560,
     priceUnit: "Set",
     unitPrice: 36.560,
-    description: "18\" full extension undermount drawer slides with BLUMOTION."
+    description: "18\" full extension undermount drawer slides with BLUMOTION.",
+    image: "Slide.png"
   },
   {
     id: 6,
@@ -72,7 +77,8 @@ const products = [
     price: 11.120,
     priceUnit: "Each",
     unitPrice: 11.120,
-    description: "95 degree onyx black soft-close blind corner hinge, Inserta."
+    description: "95 degree onyx black soft-close blind corner hinge, Inserta.",
+    image: "Clip.png"
   },
   {
     id: 7,
@@ -82,7 +88,8 @@ const products = [
     price: 54.330,
     priceUnit: "Set",
     unitPrice: 54.330,
-    description: "18\" 569F heavy duty TANDEM BLUMOTION slide."
+    description: "18\" 569F heavy duty TANDEM BLUMOTION slide.",
+    image: "Slide2.png"
   },
   {
     id: 8,
@@ -92,7 +99,8 @@ const products = [
     price: 52.130,
     priceUnit: "Set",
     unitPrice: 52.130,
-    description: "18\" 569H heavy duty TANDEM BLUMOTION slide."
+    description: "18\" 569H heavy duty TANDEM BLUMOTION slide.",
+    image: "Slide3.png"
   },
   {
     id: 9,
@@ -102,7 +110,8 @@ const products = [
     price: 34.250,
     priceUnit: "Set",
     unitPrice: 34.250,
-    description: "21\" full extension soft-close undermount drawer slides."
+    description: "21\" full extension soft-close undermount drawer slides.",
+    image: "Slide4.png"
   }
 ];
 
