@@ -6,7 +6,10 @@ const port = process.env.PORT || 3004;
 
 // Middleware to enable CORS for your website
 app.use(cors({
-  origin: 'http://localhost:3001'
+  origin: [
+    'http://localhost:3001',
+    'https://test-project-wbscsite.vercel.app'
+  ]
 }));
 
 // Middleware to parse JSON bodies
