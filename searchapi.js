@@ -23,7 +23,7 @@ const products = [
     priceUnit: "1000 Each",
     unitPrice: 0.100,
     description: "Deep thread system screws with POZI drive, #7 gauge, 1/2\" length.",
-    image: "Screw1.png"
+    image: "Screw.png"
   },
   {
     id: 2,
